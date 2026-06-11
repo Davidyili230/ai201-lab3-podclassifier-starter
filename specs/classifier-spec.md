@@ -145,8 +145,9 @@ exactly as received — no modification needed before calling.
 
 ```
 Call _client.chat.completions.create() with:
-  - model: the model name from config (MODEL_NAME)
+  - model: the model name from config (LLM_MODEL)
   - messages: a list with one dict — {"role": "user", "content": prompt}
+    (system-design.md shows an optional system message too — either shape works)
   - max_tokens: a reasonable limit (e.g., 200–300) to keep responses concise
 
 Extract the response text from:
