@@ -55,16 +55,16 @@ examples teach the model what each label means at inference time.
 
 ## Component Status
 
-| Component | File | Status |
-|---|---|---|
-| Load + merge labeled examples | `classifier.py` | ✅ Complete |
-| Build few-shot prompt | `classifier.py` | ⬜ TODO (Milestone 2) |
-| Classify a single episode | `classifier.py` | ⬜ TODO (Milestone 2) |
-| Run evaluation loop | `evaluate.py` | ✅ Complete |
-| Compute overall accuracy | `evaluate.py` | ⬜ TODO (Milestone 3) |
-| Compute per-class accuracy | `evaluate.py` | ⬜ TODO (Milestone 3) |
-| Format evaluation report | `evaluate.py` | ✅ Complete |
-| Gradio UI | `app.py` | ✅ Complete |
+| Component                     | File            | Status                |
+| ----------------------------- | --------------- | --------------------- |
+| Load + merge labeled examples | `classifier.py` | ✅ Complete           |
+| Build few-shot prompt         | `classifier.py` | ⬜ TODO (Milestone 2) |
+| Classify a single episode     | `classifier.py` | ⬜ TODO (Milestone 2) |
+| Run evaluation loop           | `evaluate.py`   | ✅ Complete           |
+| Compute overall accuracy      | `evaluate.py`   | ⬜ TODO (Milestone 3) |
+| Compute per-class accuracy    | `evaluate.py`   | ⬜ TODO (Milestone 3) |
+| Format evaluation report      | `evaluate.py`   | ✅ Complete           |
+| Gradio UI                     | `app.py`        | ✅ Complete           |
 
 ---
 
@@ -77,13 +77,13 @@ classification pattern at inference time.
 
 This lab makes that parallel explicit:
 
-| ML concept | This lab's equivalent |
-|---|---|
-| Training data | `my_labels.json` + `train_episodes.json` |
-| Training signal | Labeled examples in the prompt |
-| Model | `llama-3.3-70b-versatile` (weights fixed) |
-| Inference | `classify_episode()` |
-| Evaluation | `run_evaluation()` on held-out test set |
+| ML concept      | This lab's equivalent                                |
+| --------------- | ---------------------------------------------------- |
+| Training data   | `my_labels.json` + `train_episodes.json`             |
+| Training signal | Labeled examples in the prompt                       |
+| Model           | `llama-3.3-70b-versatile` (weights fixed)            |
+| Inference       | `classify_episode()`                                 |
+| Evaluation      | `run_evaluation()` on held-out test set              |
 | Accuracy metric | `compute_accuracy()`, `compute_per_class_accuracy()` |
 
 **Key insight:** The quality of your labels directly affects classifier performance —
